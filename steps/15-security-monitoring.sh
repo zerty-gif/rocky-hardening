@@ -44,7 +44,11 @@ grep -E "^PermitRootLogin|^PasswordAuthentication|^Port" /etc/ssh/sshd_config.d/
 
 # Check for failed login attempts
 echo -e "\n[Recent Failed Login Attempts]" >> $REPORT_FILE
-grep "Failed password" /var/log/secure | tail -10 >> $REPORT_FILE
+if [ -r /var/log/secure ]; then
+    grep "Failed password" /var/log/secure | tail -10 >> $REPORT_FILE
+else
+    journalctl -u sshd --no-pager 2>/dev/null | grep "Failed password" | tail -10 >> $REPORT_FILE
+fi
 
 # Check listening services
 echo -e "\n[Listening Services]" >> $REPORT_FILE

@@ -1,6 +1,6 @@
-# Hobiri Security Hardening Script - Rocky Linux 9 edition
+# Hobiri Security Hardening Script - Rocky Linux 10 edition
 
-This script provides comprehensive security hardening for Rocky Linux 9 servers based on industry best practices and security guidelines.
+This script provides comprehensive security hardening for Rocky Linux 10 servers based on industry best practices and security guidelines.
 
 ## Features
 
@@ -30,7 +30,7 @@ This script provides comprehensive security hardening for Rocky Linux 9 servers 
 ## Quick Start
 
 ### Prerequisites
-- Rocky Linux 9 server with root access
+- Rocky Linux 10 server with root access
 - Internet connection for package installation
 - Basic understanding of Linux system administration
 
