@@ -81,7 +81,7 @@ fi
 main() {
     # Get user input for customization
     echo
-    log_info "Starting Rocky Linux 9 hardening process..."
+    log_info "Starting Rocky Linux 10 hardening process..."
     log_info "Log file: $LOGFILE"
 
     check_root
@@ -116,7 +116,7 @@ main() {
     log_info "Generating final security report..."
     /usr/local/bin/security-compliance-check.sh
     
-    log_success "Rocky Linux 9 security hardening completed successfully!"
+    log_success "Rocky Linux 10 security hardening completed successfully!"
     
     USER_PASSWORD=$(grep "Password:" /root/user_credentials.txt | cut -d' ' -f2)
 
